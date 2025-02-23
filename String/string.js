@@ -1,2 +1,2 @@
 const string =['a','b','c']
-console.log(string)
+console.log(string,"hello")
