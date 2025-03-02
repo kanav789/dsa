@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure</title>
+</head>
+<body style="background-color: rgb(90, 89, 89);">
+
+  <button id="orange">Orange</button>
+  <button id="green">Green</button>
+
+    
+</body>
+<script>// lexical scoping 
+
+
+    // function outer(){
+    //  let username = 'johnhi';
+    //  function inner(){
+    // console.log(username);
+    //  }
+    // inner()
+    
+    // }
+    // outer()
+    
+
+
+        // closure
+//     const makefunc = () => {
+//         let name = 'john';
+//         const display= () => {console.log(name);}
+//        return display
+//       }
+//    const make= makefunc()
+//   make()
+
+    </script>
+
+<script>
+// practical implementation 
+
+
+// document.getElementById('orange').onclick = function() {
+//     document.body.style.backgroundColor=  `orange`
+// }
+// document.getElementById('green').onclick = function() {
+//     document.body.style.backgroundColor=  `green`
+// }
+
+
+function clickhandler(color){
+
+    return function(){
+         document.body.style.backgroundColor=  `${color}`
+    }
+
+}
+document.getElementById('orange').onclick =clickhandler('orange')
+
+document.getElementById('green').onclick =clickhandler('green')
+  
+ 
+
+</script>
+
+</html>
